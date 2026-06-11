@@ -36,5 +36,5 @@
             "prompt": "Imagine tres especialistas diferentes respondendo essa pergunta.\nTodos os especialistas irão escrever 1 passo do seu pensamento, depois irão compartilhar com o grupo.\n Ai todos os especialistas irão para o proximo passo, etc. se algum especialista eprceber que esta errado a qualquer ponto ele sai, a pergunta é: quais são os pontos principais desse documento"
         }
     ],
-    "comparation": "Compare essas duas extrações de pontos principais do documento e expresse em um valor numerico de porcentagem 1-100% a semelhanca entre elas"
+    "comparation": "Compare essas duas extrações de pontos principais do documento e expresse em um valor numerico de porcentagem 0-100% a semelhanca entre elas"
 }
