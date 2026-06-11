@@ -4,7 +4,7 @@ import time
 from google import genai
 from google.genai.errors import APIError
 
-GEMINI_API_KEY = "SUA_CHAVE_DE_API_AQUI"
+GEMINI_API_KEY = "chave"
 
 def carregar_json(caminho):
     if not os.path.exists(caminho):
@@ -39,13 +39,13 @@ def avaliar_toda_a_pasta():
     prompt_compara = config_prompts["comparation"]
     gabarito_humano = carregar_json("./data/other/00_lista_resolucoes.json")
     
-    pasta_resultados = "./data/resultados_ia/"
+    pasta_resultados = "./data/output/gemini/"
     resultados_finais = []
 
     arquivos = [f for f in os.listdir(pasta_resultados) if f.endswith('.json')]
     
     if not arquivos:
-        print("⚠️ Nenhum arquivo encontrado na pasta ./data/resultados_ia/.")
+        print("Nenhum arquivo encontrado na pasta ./data/output/gemini/.")
         return
 
     print(f"Encontrados {len(arquivos)} arquivos para avaliação. Iniciando...")
@@ -79,6 +79,7 @@ def avaliar_toda_a_pasta():
         
         print(f"Avaliando {nome_arquivo} (Prompt: {id_prompt}, PDF: {id_pdf})...")
         
+        # Loop de tentativa para contornar o erro 429
         sucesso = False
         while not sucesso:
             try:
@@ -86,10 +87,9 @@ def avaliar_toda_a_pasta():
                     model='gemini-2.5-flash',
                     contents=prompt_final,
                     config={
-                        'temperature': 0.0,
-                        'top_p': 0.1,
-                        'top_k': 1
-                    }
+                        'temperature': 0.0, # Mantém a IA estrita
+                        'top_p': 0.1, # Restringe o pool de palavras por probabilidade acumulada
+                        'top_k': 1} # Limita a escolha estritamente à palavra mais provável de todas
                 )
                 
                 nota = response.text.strip()
@@ -99,26 +99,28 @@ def avaliar_toda_a_pasta():
                     "id_pdf": id_pdf,
                     "acuracia_calculada": nota
                 })
-                print(f"✅ Processado com sucesso!")
+                print(f"Processado com sucesso!")
                 sucesso = True
+                
+                # Pausa leve de 3 segundos entre requisições normais para evitar bloqueios
                 time.sleep(3) 
                 
             except APIError as e:
                 if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
-                    print("⚠️ Cota esgotada (Erro 429). Aguardando 60 segundos...")
-                    time.sleep(60)
+                    print("Cota esgotada (Erro 429). Aguardando 60 segundos para o servidor liberar...")
+                    time.sleep(60) # Espera 1 minuto e tenta o MESMO arquivo de novo
                 else:
-                    print(f"❌ Erro crítico na API: {e}")
-                    break
+                    print(f"Erro crítico na API: {e}")
+                    break # Se for outro erro, pula para n travar em loop eterno
             except Exception as e:
-                print(f"❌ Erro inesperado: {e}")
+                print(f"Erro  inesperado: {e}")
                 break
 
     caminho_salvamento = "./data/other/resultado_final_acuracia.json"
     with open(caminho_salvamento, 'w', encoding='utf-8') as f:
         json.dump(resultados_finais, f, indent=4, ensure_ascii=False)
         
-    print(f"\n🎉 Tudo pronto! O relatório com todas as notas foi salvo em: {caminho_salvamento}")
+    print(f"\nO relatório com todas as notas foi salvo em: {caminho_salvamento}")
 
 if __name__ == "__main__":
     avaliar_toda_a_pasta()
