@@ -1,0 +1,13 @@
+{
+  "extraction": [
+    {
+      "nome": "padrão",
+      "prompt": "Extraia e referencie os pontos principais desse documento e resuma"
+    },
+    {
+      "nome": "especialista",
+      "prompt": "Você é um especialista em extracao de pontos críticos de documentos, analise esse documento e reporte os pontos que encontrou"
+    }
+  ],
+  "comparation": "Compare essas duas extrações de pontos principais do documento e expresse in um valor numerico de porcentagem 1-100% a semelhanca entre elas"
+}
