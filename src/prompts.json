@@ -1,0 +1,40 @@
+{
+    "extraction": [
+        {
+            "id": 1,
+            "nome": "padrão",
+            "prompt": "Extraia e referencie os pontos principais desse documento e resuma"
+        },
+        {
+            "id": 2,
+            "nome": "especialista",
+            "prompt": "Você é um especialista em extracao de pontos criticos de documentos, analise esse documento e reporte os pontos que encontrou"
+        },
+        {
+            "id": 3,
+            "nome": "simples e breve",
+            "prompt": "Extraia os pontos principais"
+        },
+        {
+            "id": 4,
+            "nome": "emergencia",
+            "prompt": "Essa é uma emergência critica, extraia os pontos principais desse documento"
+        },
+        {
+            "id": 5,
+            "nome": "erros gramaticais",
+            "prompt": "exctraia os ponrtos deshe dokumemto"
+        },
+        {
+            "id": 6,
+            "nome": "gritos",
+            "prompt": "NÃO COMETA ERROS! EXTRAIA TODOS OS PONTOS PRINCIPAIS DESSE DOCUMENTO IMEDIATAMENTE!"
+        },
+        {
+            "id": 7,
+            "nome": "Tree-of-Thought Prompting",
+            "prompt": "Imagine tres especialistas diferentes respondendo essa pergunta.\nTodos os especialistas irão escrever 1 passo do seu pensamento, depois irão compartilhar com o grupo.\n Ai todos os especialistas irão para o proximo passo, etc. se algum especialista eprceber que esta errado a qualquer ponto ele sai, a pergunta é: quais são os pontos principais desse documento"
+        }
+    ],
+    "comparation": "Compare essas duas extrações de pontos principais do documento e expresse em um valor numerico de porcentagem 1-100% a semelhanca entre elas"
+}

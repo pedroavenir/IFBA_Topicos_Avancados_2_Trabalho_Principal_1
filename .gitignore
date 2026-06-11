@@ -1,5 +1,6 @@
 # enviroment
 .local
+.env
 
 # temporary enviroment
 data/other/.~lock.*#
