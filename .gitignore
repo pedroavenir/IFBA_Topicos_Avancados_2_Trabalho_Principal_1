@@ -5,6 +5,3 @@
 # temporary enviroment
 data/other/.~lock.*#
 *.lock
-
-# not intended
-data/output
