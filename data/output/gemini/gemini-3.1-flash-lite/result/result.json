@@ -1,0 +1,832 @@
+{
+    "data": [
+        {
+            "id": 0,
+            "file_id": "1",
+            "extract_id": 1,
+            "score": 15
+        },
+        {
+            "id": 1,
+            "file_id": "1",
+            "extract_id": 2,
+            "score": 45
+        },
+        {
+            "id": 2,
+            "file_id": "1",
+            "extract_id": 7,
+            "score": 25
+        },
+        {
+            "id": 3,
+            "file_id": "2",
+            "extract_id": 1,
+            "score": 65
+        },
+        {
+            "id": 4,
+            "file_id": "2",
+            "extract_id": 2,
+            "score": 35
+        },
+        {
+            "id": 5,
+            "file_id": "2",
+            "extract_id": 7,
+            "score": 65
+        },
+        {
+            "id": 6,
+            "file_id": "3",
+            "extract_id": 1,
+            "score": 45
+        },
+        {
+            "id": 7,
+            "file_id": "3",
+            "extract_id": 2,
+            "score": 45
+        },
+        {
+            "id": 8,
+            "file_id": "3",
+            "extract_id": 7,
+            "score": 95
+        },
+        {
+            "id": 9,
+            "file_id": "4",
+            "extract_id": 1,
+            "score": 15
+        },
+        {
+            "id": 10,
+            "file_id": "4",
+            "extract_id": 2,
+            "score": 15
+        },
+        {
+            "id": 11,
+            "file_id": "4",
+            "extract_id": 7,
+            "score": 15
+        },
+        {
+            "id": 12,
+            "file_id": "5",
+            "extract_id": 1,
+            "score": 65
+        },
+        {
+            "id": 13,
+            "file_id": "5",
+            "extract_id": 2,
+            "score": 45
+        },
+        {
+            "id": 14,
+            "file_id": "5",
+            "extract_id": 7,
+            "score": 95
+        },
+        {
+            "id": 15,
+            "file_id": "6",
+            "extract_id": 1,
+            "score": 45
+        },
+        {
+            "id": 16,
+            "file_id": "6",
+            "extract_id": 2,
+            "score": 65
+        },
+        {
+            "id": 17,
+            "file_id": "6",
+            "extract_id": 7,
+            "score": 0
+        },
+        {
+            "id": 18,
+            "file_id": "7",
+            "extract_id": 1,
+            "score": 85
+        },
+        {
+            "id": 19,
+            "file_id": "7",
+            "extract_id": 2,
+            "score": 75
+        },
+        {
+            "id": 20,
+            "file_id": "7",
+            "extract_id": 7,
+            "score": 85
+        },
+        {
+            "id": 21,
+            "file_id": "8",
+            "extract_id": 1,
+            "score": 0
+        },
+        {
+            "id": 22,
+            "file_id": "8",
+            "extract_id": 2,
+            "score": 5
+        },
+        {
+            "id": 23,
+            "file_id": "8",
+            "extract_id": 7,
+            "score": 5
+        },
+        {
+            "id": 24,
+            "file_id": "9",
+            "extract_id": 1,
+            "score": 85
+        },
+        {
+            "id": 25,
+            "file_id": "9",
+            "extract_id": 2,
+            "score": 45
+        },
+        {
+            "id": 26,
+            "file_id": "9",
+            "extract_id": 7,
+            "score": 95
+        },
+        {
+            "id": 27,
+            "file_id": "10",
+            "extract_id": 1,
+            "score": 65
+        },
+        {
+            "id": 28,
+            "file_id": "10",
+            "extract_id": 2,
+            "score": 75
+        },
+        {
+            "id": 29,
+            "file_id": "10",
+            "extract_id": 7,
+            "score": 65
+        },
+        {
+            "id": 30,
+            "file_id": "11",
+            "extract_id": 1,
+            "score": 0
+        },
+        {
+            "id": 31,
+            "file_id": "11",
+            "extract_id": 2,
+            "score": 0
+        },
+        {
+            "id": 32,
+            "file_id": "11",
+            "extract_id": 7,
+            "score": 0
+        },
+        {
+            "id": 33,
+            "file_id": "12",
+            "extract_id": 1,
+            "score": 35
+        },
+        {
+            "id": 34,
+            "file_id": "12",
+            "extract_id": 2,
+            "score": 15
+        },
+        {
+            "id": 35,
+            "file_id": "12",
+            "extract_id": 7,
+            "score": 15
+        },
+        {
+            "id": 36,
+            "file_id": "13",
+            "extract_id": 1,
+            "score": 0
+        },
+        {
+            "id": 37,
+            "file_id": "13",
+            "extract_id": 2,
+            "score": 35
+        },
+        {
+            "id": 38,
+            "file_id": "13",
+            "extract_id": 7,
+            "score": 25
+        },
+        {
+            "id": 39,
+            "file_id": "14",
+            "extract_id": 1,
+            "score": 35
+        },
+        {
+            "id": 40,
+            "file_id": "14",
+            "extract_id": 2,
+            "score": 15
+        },
+        {
+            "id": 41,
+            "file_id": "14",
+            "extract_id": 7,
+            "score": 85
+        },
+        {
+            "id": 42,
+            "file_id": "15",
+            "extract_id": 1,
+            "score": 25
+        },
+        {
+            "id": 43,
+            "file_id": "15",
+            "extract_id": 2,
+            "score": 35
+        },
+        {
+            "id": 44,
+            "file_id": "15",
+            "extract_id": 7,
+            "score": 15
+        },
+        {
+            "id": 45,
+            "file_id": "16",
+            "extract_id": 1,
+            "score": 45
+        },
+        {
+            "id": 46,
+            "file_id": "16",
+            "extract_id": 2,
+            "score": 65
+        },
+        {
+            "id": 47,
+            "file_id": "16",
+            "extract_id": 7,
+            "score": 15
+        },
+        {
+            "id": 48,
+            "file_id": "17",
+            "extract_id": 1,
+            "score": 85
+        },
+        {
+            "id": 49,
+            "file_id": "17",
+            "extract_id": 2,
+            "score": 92
+        },
+        {
+            "id": 50,
+            "file_id": "17",
+            "extract_id": 7,
+            "score": 75
+        },
+        {
+            "id": 51,
+            "file_id": "18",
+            "extract_id": 1,
+            "score": 95
+        },
+        {
+            "id": 52,
+            "file_id": "18",
+            "extract_id": 2,
+            "score": 85
+        },
+        {
+            "id": 53,
+            "file_id": "18",
+            "extract_id": 7,
+            "score": 95
+        },
+        {
+            "id": 54,
+            "file_id": "19",
+            "extract_id": 1,
+            "score": 15
+        },
+        {
+            "id": 55,
+            "file_id": "19",
+            "extract_id": 2,
+            "score": 0
+        },
+        {
+            "id": 56,
+            "file_id": "19",
+            "extract_id": 7,
+            "score": 5
+        },
+        {
+            "id": 0,
+            "file_id": "21",
+            "extract_id": 1,
+            "score": 35
+        },
+        {
+            "id": 1,
+            "file_id": "21",
+            "extract_id": 2,
+            "score": 45
+        },
+        {
+            "id": 2,
+            "file_id": "21",
+            "extract_id": 7,
+            "score": 100
+        },
+        {
+            "id": 3,
+            "file_id": "22",
+            "extract_id": 1,
+            "score": 95
+        },
+        {
+            "id": 4,
+            "file_id": "22",
+            "extract_id": 2,
+            "score": 90
+        },
+        {
+            "id": 5,
+            "file_id": "22",
+            "extract_id": 7,
+            "score": 95
+        },
+        {
+            "id": 6,
+            "file_id": "23",
+            "extract_id": 1,
+            "score": 100
+        },
+        {
+            "id": 7,
+            "file_id": "23",
+            "extract_id": 2,
+            "score": 15
+        },
+        {
+            "id": 8,
+            "file_id": "23",
+            "extract_id": 7,
+            "score": 15
+        },
+        {
+            "id": 9,
+            "file_id": "24",
+            "extract_id": 1,
+            "score": 98
+        },
+        {
+            "id": 10,
+            "file_id": "24",
+            "extract_id": 2,
+            "score": 35
+        },
+        {
+            "id": 11,
+            "file_id": "24",
+            "extract_id": 7,
+            "score": 75
+        },
+        {
+            "id": 12,
+            "file_id": "25",
+            "extract_id": 1,
+            "score": 95
+        },
+        {
+            "id": 13,
+            "file_id": "25",
+            "extract_id": 2,
+            "score": 85
+        },
+        {
+            "id": 14,
+            "file_id": "25",
+            "extract_id": 7,
+            "score": 85
+        },
+        {
+            "id": 15,
+            "file_id": "26",
+            "extract_id": 1,
+            "score": 45
+        },
+        {
+            "id": 16,
+            "file_id": "26",
+            "extract_id": 2,
+            "score": 35
+        },
+        {
+            "id": 17,
+            "file_id": "26",
+            "extract_id": 7,
+            "score": 15
+        },
+        {
+            "id": 18,
+            "file_id": "27",
+            "extract_id": 1,
+            "score": 0
+        },
+        {
+            "id": 19,
+            "file_id": "27",
+            "extract_id": 2,
+            "score": 0
+        },
+        {
+            "id": 20,
+            "file_id": "27",
+            "extract_id": 7,
+            "score": 0
+        },
+        {
+            "id": 21,
+            "file_id": "28",
+            "extract_id": 1,
+            "score": 65
+        },
+        {
+            "id": 22,
+            "file_id": "28",
+            "extract_id": 2,
+            "score": 45
+        },
+        {
+            "id": 23,
+            "file_id": "28",
+            "extract_id": 7,
+            "score": 45
+        },
+        {
+            "id": 24,
+            "file_id": "29",
+            "extract_id": 1,
+            "score": 65
+        },
+        {
+            "id": 25,
+            "file_id": "29",
+            "extract_id": 2,
+            "score": 65
+        },
+        {
+            "id": 26,
+            "file_id": "29",
+            "extract_id": 7,
+            "score": 35
+        },
+        {
+            "id": 27,
+            "file_id": "30",
+            "extract_id": 1,
+            "score": 100
+        },
+        {
+            "id": 28,
+            "file_id": "30",
+            "extract_id": 2,
+            "score": 65
+        },
+        {
+            "id": 29,
+            "file_id": "30",
+            "extract_id": 7,
+            "score": 95
+        },
+        {
+            "id": 30,
+            "file_id": "31",
+            "extract_id": 1,
+            "score": 85
+        },
+        {
+            "id": 31,
+            "file_id": "31",
+            "extract_id": 2,
+            "score": 85
+        },
+        {
+            "id": 32,
+            "file_id": "31",
+            "extract_id": 7,
+            "score": 98
+        },
+        {
+            "id": 33,
+            "file_id": "32",
+            "extract_id": 1,
+            "score": 45
+        },
+        {
+            "id": 34,
+            "file_id": "32",
+            "extract_id": 2,
+            "score": 35
+        },
+        {
+            "id": 35,
+            "file_id": "32",
+            "extract_id": 7,
+            "score": 10
+        },
+        {
+            "id": 36,
+            "file_id": "33",
+            "extract_id": 1,
+            "score": 65
+        },
+        {
+            "id": 37,
+            "file_id": "33",
+            "extract_id": 2,
+            "score": 35
+        },
+        {
+            "id": 38,
+            "file_id": "33",
+            "extract_id": 7,
+            "score": 35
+        },
+        {
+            "id": 39,
+            "file_id": "34",
+            "extract_id": 1,
+            "score": 15
+        },
+        {
+            "id": 40,
+            "file_id": "34",
+            "extract_id": 2,
+            "score": 10
+        },
+        {
+            "id": 41,
+            "file_id": "34",
+            "extract_id": 7,
+            "score": 0
+        },
+        {
+            "id": 42,
+            "file_id": "35",
+            "extract_id": 1,
+            "score": 0
+        },
+        {
+            "id": 43,
+            "file_id": "35",
+            "extract_id": 2,
+            "score": 0
+        },
+        {
+            "id": 44,
+            "file_id": "35",
+            "extract_id": 7,
+            "score": 0
+        },
+        {
+            "id": 45,
+            "file_id": "36",
+            "extract_id": 1,
+            "score": 100
+        },
+        {
+            "id": 46,
+            "file_id": "36",
+            "extract_id": 2,
+            "score": 85
+        },
+        {
+            "id": 47,
+            "file_id": "36",
+            "extract_id": 7,
+            "score": 15
+        },
+        {
+            "id": 48,
+            "file_id": "37",
+            "extract_id": 1,
+            "score": 75
+        },
+        {
+            "id": 49,
+            "file_id": "37",
+            "extract_id": 2,
+            "score": 85
+        },
+        {
+            "id": 50,
+            "file_id": "37",
+            "extract_id": 7,
+            "score": 45
+        },
+        {
+            "id": 51,
+            "file_id": "38",
+            "extract_id": 1,
+            "score": 65
+        },
+        {
+            "id": 52,
+            "file_id": "38",
+            "extract_id": 2,
+            "score": 45
+        },
+        {
+            "id": 53,
+            "file_id": "38",
+            "extract_id": 7,
+            "score": 45
+        },
+        {
+            "id": 54,
+            "file_id": "39",
+            "extract_id": 1,
+            "score": 45
+        },
+        {
+            "id": 55,
+            "file_id": "39",
+            "extract_id": 2,
+            "score": 45
+        },
+        {
+            "id": 56,
+            "file_id": "39",
+            "extract_id": 7,
+            "score": 45
+        },
+        {
+            "id": 57,
+            "file_id": "40",
+            "extract_id": 1,
+            "score": 95
+        },
+        {
+            "id": 58,
+            "file_id": "40",
+            "extract_id": 2,
+            "score": 95
+        },
+        {
+            "id": 59,
+            "file_id": "40",
+            "extract_id": 7,
+            "score": 85
+        },
+        {
+            "id": 60,
+            "file_id": "41",
+            "extract_id": 1,
+            "score": 15
+        },
+        {
+            "id": 61,
+            "file_id": "41",
+            "extract_id": 2,
+            "score": 25
+        },
+        {
+            "id": 62,
+            "file_id": "41",
+            "extract_id": 7,
+            "score": 25
+        },
+        {
+            "id": 63,
+            "file_id": "42",
+            "extract_id": 1,
+            "score": 0
+        },
+        {
+            "id": 64,
+            "file_id": "42",
+            "extract_id": 2,
+            "score": 0
+        },
+        {
+            "id": 65,
+            "file_id": "42",
+            "extract_id": 7,
+            "score": 0
+        },
+        {
+            "id": 66,
+            "file_id": "43",
+            "extract_id": 1,
+            "score": 45
+        },
+        {
+            "id": 67,
+            "file_id": "43",
+            "extract_id": 2,
+            "score": 65
+        },
+        {
+            "id": 68,
+            "file_id": "43",
+            "extract_id": 7,
+            "score": 95
+        },
+        {
+            "id": 69,
+            "file_id": "44",
+            "extract_id": 1,
+            "score": 15
+        },
+        {
+            "id": 70,
+            "file_id": "44",
+            "extract_id": 2,
+            "score": 0
+        },
+        {
+            "id": 71,
+            "file_id": "44",
+            "extract_id": 7,
+            "score": 15
+        },
+        {
+            "id": 72,
+            "file_id": "45",
+            "extract_id": 1,
+            "score": 15
+        },
+        {
+            "id": 73,
+            "file_id": "45",
+            "extract_id": 2,
+            "score": 15
+        },
+        {
+            "id": 74,
+            "file_id": "45",
+            "extract_id": 7,
+            "score": 5
+        },
+        {
+            "id": 75,
+            "file_id": "47",
+            "extract_id": 1,
+            "score": 45
+        },
+        {
+            "id": 76,
+            "file_id": "47",
+            "extract_id": 2,
+            "score": 35
+        },
+        {
+            "id": 77,
+            "file_id": "47",
+            "extract_id": 7,
+            "score": 65
+        },
+        {
+            "id": 78,
+            "file_id": "53",
+            "extract_id": 1,
+            "score": 85
+        },
+        {
+            "id": 79,
+            "file_id": "53",
+            "extract_id": 2,
+            "score": 85
+        },
+        {
+            "id": 80,
+            "file_id": "53",
+            "extract_id": 7,
+            "score": 95
+        }
+    ]
+}

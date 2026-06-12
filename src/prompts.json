@@ -16,5 +16,5 @@
             "prompt": "Imagine tres especialistas diferentes respondendo essa pergunta.\nTodos os especialistas irão escrever 1 passo do seu pensamento, depois irão compartilhar com o grupo.\n Ai todos os especialistas irão para o proximo passo, etc. se algum especialista eprceber que esta errado a qualquer ponto ele sai, a pergunta é: quais são os pontos principais desse documento"
         }
     ],
-    "comparation": "Compare essas duas extrações de pontos principais do documento e expresse em um valor numerico de porcentagem 0-100% a semelhanca entre as informações apresentadas nelas"
+    "comparation": "Compare as duas extrações de pontos principais do documento \"ref1\" e \"ref2\" com o \"extract\" do ponto de vista de um especialista em comparações textuais expresse em um valor numerico 0-100 que represente a porcentagem da semelhanca entre as informações apresentadas nas \"ref1\" e \"ref2\" em comparação com o \"extract\". Seja extremamente minucisoso no cálculo de sua porcentagem e dê um resultado realista, caso as \"ref1\" e \"ref2\" sejam iguais apenas ignore a segunda copia e trate como uma comparação entre essa referencia central e o \"extract\""
 }
