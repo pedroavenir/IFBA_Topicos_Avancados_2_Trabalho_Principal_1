@@ -7,9 +7,13 @@ from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 import json
 import time
+from pathlib import Path
 
 with open('prompts.json', 'r', encoding='utf-8') as arquivo:
     dados = json.load(arquivo)
+
+with open('../data/other/00_lista_resolucoes.json', 'r', encoding='utf-8') as arquivo2:
+    dados2 = json.load(arquivo2)
 
 # Load environment variables from .env file
 load_dotenv()
@@ -21,7 +25,7 @@ if not API_KEY:
 
 client = genai.Client(api_key=API_KEY)
 
-def tentar_gerar_conteudo(prompt):
+def tentar_gerar_conteudo(prompt,arquivo_pdf):
     # Definir o formato do JSON para retorno usando Pydantic
     class AnaliseDocumento(BaseModel):
         titulo_documento: str = Field(description="O título principal encontrado no documento.")
@@ -35,19 +39,14 @@ def tentar_gerar_conteudo(prompt):
         response_mime_type="application/json", # Força a saída a ser um JSON válido
         response_schema=AnaliseDocumento, # Passa a estrutura exata que o JSON deve seguir
     )
-
-    # Fazer o upload do arquivo PDF para a API do Gemini
-    caminho_do_pdf = "53.pdf"  # Substitua pelo caminho real do seu arquivo
     """
     Tenta se comunicar com a API.
     Retorna o texto do JSON se der certo, ou None se ocorrer qualquer erro.
     """
     try:
-        print("Enviando o PDF para o Gemini...")
-        arquivo_pdf = client.files.upload(file=caminho_do_pdf)
         print("Enviando requisição para o Gemini...")
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.1-flash-lite",
             contents=[
                 arquivo_pdf,
                 "Analise minuciosamente este arquivo PDF e extraia os dados conforme o schema JSON solicitado."
@@ -73,24 +72,35 @@ def tentar_gerar_conteudo(prompt):
         print(f"\n❌ Ocorreu um erro inesperado no Python: {e}")
         return None
 
+# isso aqui existe aoenas se dar algum erro para ele recomecar em um arquivo especifico
+start_at = 0
+for pdf in dados2["items"]:
 
-for item in dados["extraction"]:
-    # Dentro do loop, 'item' representa cada {} individualmente
-    print(f"Processando: {item}")
+    if start_at > 0:
+        start_at = start_at - 1
+        print("skip")
+        continue
 
-    # Você pode acessar as propriedades de cada objeto individual assim:
-    print(f"ID: {item['id']}, Nome: {item['nome']}\n")
+    pdf_path = pdf["path"]
+    pdf_full_path = f"../data/pdfs/{pdf_path}"  # Substitua pelo caminho real do seu arquivo
+    print(f"Enviando o PDF {pdf_path} para o Gemini...")
+    arquivo_pdf = client.files.upload(file=pdf_full_path)
 
-    resultado_json = None
+    for item in dados["extraction"]:
+        print(f"ID: {item['id']}, Nome: {item['nome']}\n")
 
-    while resultado_json is None:
-        resultado_json = tentar_gerar_conteudo(item['prompt'])
+        resultado_json = None
 
-        # Se a função retornou None, significa que deu erro dentro dela
-        if resultado_json is None:
-            print("Tentativa falhou. Aguardando 15 segundos para tentar novamente...\n")
-            time.sleep(15)
+        while resultado_json is None:
+            resultado_json = tentar_gerar_conteudo(item['prompt'],arquivo_pdf)
 
-    # Se o código saiu do loop, significa que 'resultado_json' finalmente ganhou um texto
-    print("\n--- Resultado JSON Recebido com Sucesso! ---")
-    print(resultado_json)
+            # Se a função retornou None, significa que deu erro dentro dela
+            if resultado_json is None:
+                print("Tentativa falhou. Aguardando 60 segundos para tentar novamente...\n")
+                time.sleep(60)
+
+        # Se o código saiu do loop, significa que 'resultado_json' finalmente ganhou um texto
+        print("\n--- Resultado JSON Recebido com Sucesso! ---")
+        print(resultado_json)
+        file_path = Path(f'../data/output/gemini/gemini-3.1-flash-lite/file_{pdf["id"]}_extract_{item["id"]}.json')
+        file_path.write_text(resultado_json, encoding='utf-8')
