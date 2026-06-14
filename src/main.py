@@ -260,7 +260,7 @@ def mostrar_acertos_por_arquivos(result_file_path):
     performance_model_b = []
     performance_model_c = []
 
-    max_plot = 20
+    max_plot = 100
     stop = False
 
     with open(result_file_path,"r",encoding="utf-8",) as extracted:
@@ -334,8 +334,8 @@ def mostrar_acertos_por_arquivos(result_file_path):
 #gemini_process_extracted_data("mistral/mistral-medium-3.5")
 
 # Calcula media de acertos de cada prompt por todos os arquivos
-calcular_media_de_acerto_prompts("E:/fs/code/ifba-ads/inf022/Trabalho_Principal_1/data/output/gemini/gemini-3.1-flash-lite/result/result.json")
-#mostrar_acertos_por_arquivos("E:/fs/code/ifba-ads/inf022/Trabalho_Principal_1/data/output/gemini/gemini-3.1-flash-lite/result/result.json")
+#calcular_media_de_acerto_prompts("E:/fs/code/ifba-ads/inf022/Trabalho_Principal_1/data/output/gemini/gemini-3.1-flash-lite/result/result.json")
+mostrar_acertos_por_arquivos("E:/fs/code/ifba-ads/inf022/Trabalho_Principal_1/data/output/gemini/gemini-3.1-flash-lite/result/result.json")
 
-calcular_media_de_acerto_prompts("E:/fs/code/ifba-ads/inf022/Trabalho_Principal_1/data/output/mistral/mistral-medium-3.5/result/result.json")
+#calcular_media_de_acerto_prompts("E:/fs/code/ifba-ads/inf022/Trabalho_Principal_1/data/output/mistral/mistral-medium-3.5/result/result.json")
 #mostrar_acertos_por_arquivos("E:/fs/code/ifba-ads/inf022/Trabalho_Principal_1/data/output/mistral/mistral-medium-3.5/result/result.json")
